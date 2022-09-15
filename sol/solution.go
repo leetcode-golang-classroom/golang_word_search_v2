@@ -46,7 +46,7 @@ func findWords(board [][]byte, words []string) []string {
 	}
 	visit := make(map[Pair]struct{})
 	res := make(map[string]struct{})
-	col, row := len(board), len(board[0])
+	col, row := len(board[0]), len(board)
 	var dfs func(r int, c int, node *Node)
 	dfs = func(r int, c int, node *Node) {
 		cur := node
